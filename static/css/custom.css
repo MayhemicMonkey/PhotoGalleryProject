@@ -1,0 +1,16 @@
+body {
+    padding-top: 10rem;
+}
+.navbar-brand {
+    font-size: 3rem !important;
+}
+.photo-row {
+    padding-bottom: 1rem;
+}
+.navbar {
+    border: 1rem solid #222;
+}
+.upload-container {
+    background-color: #303030 !important;
+    padding: 1rem;
+}

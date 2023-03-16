@@ -1,0 +1,40 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <title>Upload Image</title>
+</head>
+
+<body>
+  <!-- navbar centered with no link/button  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="mx-auto navbar-brand h-100 d-inline-block">Photo Gallery<sub style="font-size: small;">by Cliff
+        Harris</sub></div>
+  </nav>
+
+  <div class="container mx-auto" style="background-color: #303030; padding: 1rem; width: fit-content;">
+    <h1>Upload Your Photo</h1>
+    <br>
+
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="btn-toolbar mx-auto justify-content-end">
+        <input type="submit" class="btn btn-secondary mr-1" value="Upload">
+        <a href="/" class="btn btn-info">Cancel</a>
+      </div>
+    </form>
+  </div>
+    
+
+  <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+</html>
